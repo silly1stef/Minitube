@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MiniTube</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header><h1>MiniTube</h1></header>
+
+<nav>
+  <button onclick="showPage('home')">Home</button>
+  <button onclick="showPage('upload')">Upload Video</button>
+</nav>
+
+<div id="notification"></div>
+<div id="loading">Uploading video... ⏳</div>
+
+<main>
+  <div id="home">
+    <input type="text" id="searchInput" placeholder="Search videos...">
+    <div id="videos" class="video-grid"></div>
+  </div>
+
+  <div id="upload">
+    <form id="uploadForm">
+      <input type="file" id="videoInput" accept="video/*" required>
+      <button type="submit">Upload Video</button>
+    </form>
+  </div>
+
+  <div id="watch">
+    <video id="watchVideo" controls></video>
+    <p id="watchTitle"></p>
+    <button id="likeBtn">👍 Like (0)</button>
+    <br>
+    <button id="backBtn">⬅ Back to Home</button>
+  </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
